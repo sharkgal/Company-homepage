@@ -44,20 +44,21 @@ header {
     width: 100%;
     height: 80px;
     z-index: 1;
-    background-color: white;
 }
 
-header .mobile {
+#icon-mobile {
     display: none;
 }
 
 #icon-container {
     display: flex;
     justify-content: space-between;
+    height: 45px;
     align-items: stretch;
     padding-left: .5rem;
     padding-right: .5rem;
     border-bottom: 1px dotted rgb(136, 158, 136);
+    background-color: white;
 }
 
 .icon-content ul li {
@@ -81,6 +82,10 @@ header .mobile {
     color: rgb(72, 86, 72);
 }
 
+#secondary-nav {
+    background-color: white;
+}
+
 #secondary-nav ul li {
     color:rgb(72, 86, 72)
 }
@@ -98,6 +103,38 @@ header .mobile {
     content: ">";
     color: gray;
     margin-right: 2rem;
+}
+
+@media only screen and (max-width: 768px) {
+    #secondary-nav {
+        display: none;
+        background-color: transparent;
+    }
+    main {
+        position: relative;
+        top: 45px;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    #icon-container{
+        display: none;
+    }
+
+    #icon-mobile {
+        display: block;
+        background-color: white;
+    }
+
+    #icon-mobile ul li {
+        padding: .5rem 0;
+        margin-left: 2.5rem;
+        margin-right: 2.5rem;
+    }
+
+    #icon-mobile ul li:hover {
+        background-color: transparent;
+    }
 }
 
 /*banner*/
@@ -190,6 +227,53 @@ header .mobile {
     text-decoration: none;
 }
 
+.non-desktop {
+    display: none;
+}
+
+.tablet {
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+    #attractive {
+        display: block;
+        border: none;
+    }
+
+    .js-content p {
+        display: none;
+    }
+
+    .js-container .non-desktop {
+        display: block;
+    }
+
+    .js-container {
+        border-bottom: 2px solid rgb(136, 158, 136);
+        border-right: none;
+        display: block;
+        padding-top: 2rem !important;
+    }
+
+    .js-container,
+    .js-content,
+    .attractive-container {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .tablet {
+        display: block;
+    }
+}
+
 /*products*/
 
 #products .header {
@@ -238,6 +322,32 @@ header .mobile {
 .products-card h3 {
     font-size: 1.5rem;
     height: 2rem;
+}
+
+@media only screen and (min-width: 950px) and (max-width: 1300px) {
+    .products-container {
+        grid-template: repeat(2, 35rem)/repeat(3, 18.75rem);
+    }
+}
+
+@media only screen and (min-width: 650px) and (max-width: 950px) {
+    .products-container {
+        grid-template: repeat(4, 35rem)/repeat(2, 18.75rem);
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .products-container {
+        grid-template: repeat(8, 35rem)/18.75rem;
+    }
+
+    .products-card {
+        border: 1px dotted rgb(246, 254, 246);
+    }
+
+    .products-card:hover {
+        transform: none;
+    }
 }
 
 /*location*/
@@ -306,6 +416,19 @@ header .mobile {
     width: 40%;
 }
 
+@media only screen and (max-width: 768px) {
+    .location-container {
+        display: flex;
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .location-content,
+    .map {
+        width: 100%;
+    }
+}
+
 /*footer*/
 
 #footer {
@@ -331,4 +454,53 @@ header .mobile {
     color: white;
     text-align: left;
     padding: .5rem 1rem;
+}
+
+#mobile {
+    display: none;
+}
+
+@media only screen and (max-width: 650px) {
+    #non-mobile {
+        display: none;
+    }
+
+    #mobile {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+}
+
+/*responsive-banner&location*/
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+    .js-container {
+        width: 50%;
+        display: block;
+    }
+
+    .js-container p {
+        display: none;
+    }
+
+    .js-container .non-desktop {
+        display: block;
+    }
+
+    .attractive-container {
+        width: 50%;
+    }
+
+    .location-container {
+        display: flex;
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .location-content,
+    .map {
+        width: 100%;
+    }
 }
