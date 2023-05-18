@@ -14,7 +14,7 @@
         <header>
             <div id="icon-container">
                 <img src="./recources/images/header/logo.png" alt="">
-                <nav class="desktop tablet icon-content">
+                <nav class="icon-content">
                     <ul>
                         <li><a href="#">Search</a></li>
                         <li><a href="#">Products</a></li>
@@ -22,15 +22,15 @@
                         <li><a href="#">log-in</a></li>
                     </ul>
                 </nav>
-                <nav class="mobile icon-content">
-                    <ul>
-                        <li><a href="#"><img src="./recources/images/header/magnifying-glass-solid.svg" alt="" width="2%"></a></li>
-                        <li><a href="#"><img src="./recources/images/header/shop-solid.svg" alt="" width="2%"></a></li>
-                        <li><a href="#"><img src="./recources/images/header/cart-shopping-solid.svg" alt="" width="2%"></a></li>
-                        <li><a href="#"><img src="./recources/images/header/user-regular.svg" alt="" width="2%"></a></li>
-                    </ul>
-                </nav>
             </div>
+            <nav class="icon-content" id="icon-mobile">
+                <ul>
+                    <li><a href="#"><img src="./recources/images/header/magnifying-glass-solid.svg" alt="" width="30px"></a></li>
+                    <li><a href="#"><img src="./recources/images/header/shop-solid.svg" alt="" width="30px"></a></li>
+                    <li><a href="#"><img src="./recources/images/header/cart-shopping-solid.svg" alt="" width="30px"></a></li>
+                    <li><a href="#"><img src="./recources/images/header/user-regular.svg" alt="" width="30px"></a></li>
+                </ul>
+            </nav>
             <div id="secondary-nav" class="icon-content">
                 <ul>
                     <li><a href="#">Home</a></li>
@@ -52,16 +52,25 @@
                         <div class="js-content">
                             <h3>Investigator: Min Feng</h3>
                             <p>He is an investigator of Chinese Academy of Sciences, President of Nanjing Zhongke group Research Institute, and one of the academic leaders of medicinal fungi anti-tumor project at the Chinese Academy of Sciences. <span><a href="#">Read More</a></span></p>
+                            <p class="non-desktop"><a href="#">Read More</a></p>
                         </div>
                 </div>
                 <div class="attractive-container">
-                    <div class="attractive-item">
+                    <div class="attractive-item desktop">
                         <h3>Sino-Sci Reishi Mushroom Spore Capsules (2nd Gen)</h3>
                         <p>Sino-Sci Shell-broken Ganoderma Lucidum Spore is made of 100% raw material Ganoderma Lucidum spores by advanced technologies. Immune system booster. Energy supplement. Enhance focus & improve memory. <span><a href="#">Read More</a></span></p>
                     </div>
-                    <div class="attractive-item">
+                    <div class="attractive-item desktop">
                         <h3>Sino-Sci Innovation Reishi Spore Oil Softgel</h3>
                         <p>It takes 100% shell-broken reishi (space breeding) spores as raw material. By adopting the super critical CO2 extraction technology, the extrac ted oil contains more than 40% active Ganoderma triterpenes. <span><a href="#">Read More</a></span></p>
+                    </div>
+                    <div class="attractive-item tablet">
+                        <h3>Sino-Sci Reishi Mushroom Spore Capsules (2nd Gen)</h3>
+                        <p><span><a href="#">Read More</a></span></p>
+                    </div>
+                    <div class="attractive-item tablet">
+                        <h3>Sino-Sci Innovation Reishi Spore Oil Softgel</h3>
+                        <p><span><a href="#">Read More</a></span></p>
                     </div>
                 </div>
             </section>
@@ -128,15 +137,19 @@
             <!--footer-->
             <footer>
                 <div id="footer">
-                    <div class="footer-content">
+                    <div class="footer-content" id="non-mobile">
                         <h4>Support</h4>
                         <p>123-489-5789</p>
                         <p>zhongke@sinosci.com</p>
                     </div>
-                    <div class="footer-content">
+                    <div class="footer-content" id="non-mobile">
                         <h4>About Us</h4>
                         <p><a href="#">History of ZK</a></p>
                         <p><a href="#">Mile stone</a></p>
+                    </div>
+                    <div class="footer-content" id="mobile">
+                        <h4><a href="#">Support</a></h4>
+                        <h4><a href="#">About Us</a></h4>
                     </div>
                 </div>
                 <p class="copyright">&copy;2023 SINO-SCI</p>
